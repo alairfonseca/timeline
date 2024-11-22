@@ -1,4 +1,4 @@
-export type TimelineItem = {
+type TimelineItem = {
   id: number;
   start: string;
   end: string;

@@ -1,9 +1,15 @@
-import { TimelineItem } from "@/adapters";
+import Calendar from "./components/Calendar";
+import { TimelineGridProvider } from "./timelineGrid.context";
+import { Event } from "./types";
 
 interface TimelineProps {
-  timelineItems: TimelineItem[];
+  timelineItems: Event[];
 }
 
 export function Timeline({ timelineItems }: TimelineProps) {
-  return <pre>{JSON.stringify(timelineItems, null, 2)}</pre>
+  return (
+    <TimelineGridProvider timelineItems={timelineItems}>
+      <Calendar />
+    </TimelineGridProvider>
+  )
 }

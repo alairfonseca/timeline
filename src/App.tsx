@@ -1,16 +1,11 @@
 import { Timeline } from "./components";
 import { timelineItems } from "./adapters";
+import Modal from "react-modal";
+
+Modal.setAppElement('#root');
 
 function App() {
-  console.log({timelineItems});
-
-  return (
-    <>
-      <div>
-        <Timeline timelineItems={timelineItems} />
-      </div>
-    </>
-  );
+  return (<Timeline timelineItems={timelineItems} />);
 }
 
 export default App;
